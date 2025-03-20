@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div id="loginPage">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Benutzername">
+        <input type="password" id="password" placeholder="Passwort">
+        <button onclick="login()">Anmelden</button>
+        <p id="errorMessage"></p>
+    </div>
+
+    <div id="dashboard" style="display: none;">
+        <header>
+            <h1>Mitarbeiter-Dashboard</h1>
+            <button onclick="logout()">Logout</button>
+        </header>
+
+        <nav>
+            <div class="tab" onclick="showSection('auftraege')">Aufträge</div>
+            <div class="tab" onclick="showSection('material')">Material</div>
+            <div class="tab" onclick="showSection('todo')">To-Do-Liste</div>
+            <div class="tab" onclick="showSection('mitarbeiterverwaltung')">Mitarbeiterverwaltung</div>
+            <div class="tab" onclick="showSection('benutzerverwaltung')">Benutzerverwaltung</div>
+            <div class="tab" onclick="showSection('hintergrundaenderung')">Hintergrund ändern</div>
+        </nav>
+
+        <main>
+            <section id="auftraege">
+                <h2>Aufträge</h2>
+                <ul id="auftragsListe"></ul>
+                <input type="text" id="auftragInput" placeholder="Neuen Auftrag eingeben">
+                <button onclick="auftragHinzufuegen()">Hinzufügen</button>
+            </section>
+
+            <section id="material" style="display: none;">
+                <h2>Materialbestand</h2>
+                <p>Filament: <span id="filamentBestand">10</span> Rollen</p>
+                <button onclick="materialVerbraucht()">-1 Rolle</button>
+                <button onclick="materialAuffuellen()">+1 Rolle</button>
+            </section>
+
+            <section id="todo" style="display: none;">
+                <h2>To-Do-Liste</h2>
+                <ul id="todoListe"></ul>
+                <input type="text" id="todoInput" placeholder="Neue Aufgabe">
+                <button onclick="todoHinzufuegen()">Hinzufügen</button>
+            </section>
+
+            <section id="mitarbeiterverwaltung" style="display: none;">
+                <h2>Mitarbeiterverwaltung</h2>
+                <ul id="mitarbeiterListe"></ul>
+                <input type="text" id="newUsername" placeholder="Neuen Benutzername eingeben">
+                <input type="password" id="newPassword" placeholder="Neues Passwort">
+                <button onclick="benutzerHinzufuegen()">Benutzer hinzufügen</button>
+            </section>
+
+            <section id="benutzerverwaltung" style="display: none;">
+                <h2>Benutzerverwaltung</h2>
+                <h3>Passwort ändern</h3>
+                <input type="text" id="changeUsername" placeholder="Benutzername">
+                <input type="password" id="changePassword" placeholder="Neues Passwort">
+                <button onclick="passwortAendern()">Passwort ändern</button>
+            </section>
+
+            <section id="hintergrundaenderung" style="display: none;">
+                <h2>Hintergrund ändern</h2>
+                <h3>Dashboard Hintergrund</h3>
+                <input type="file" id="dashboardBackgroundFile" accept="image/*">
+                <button onclick="updateDashboardBackground()">Hintergrund für Dashboard aktualisieren</button>
+                <p id="dashboardUploadMessage"></p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

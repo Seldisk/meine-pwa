@@ -1,0 +1,96 @@
+html, body {
+    height: 100%; /* Setze die Höhe von HTML und Body auf 100% */
+    margin: 0; /* Entferne Standard-Margen */
+    padding: 0; /* Entferne Standard-Padding */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('path/to/your/image.jpg'); /* Pfad zu deinem Standard-Hintergrundbild */
+    background-size: cover; /* Decke den gesamten Hintergrund ab */
+    background-position: center; /* Zentriere das Bild */
+    background-repeat: no-repeat; /* Verhindere das Wiederholen des Bildes */
+}
+
+#loginPage, #dashboard {
+    text-align: center;
+    width: 100%; /* Breite auf 100% des Bildschirms setzen */
+    height: 100vh; /* Höhe auf 100% des Viewports setzen */
+    max-width: 100%; /* Maximale Breite auf 100% setzen */
+    margin: 0; /* Keine Margin, um den gesamten Raum zu nutzen */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Hintergrundfarbe mit weniger Transparenz für bessere Lesbarkeit */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Erhöhte Schatten für Tiefe */
+    border-radius: 0; /* Keine abgerundeten Ecken */
+    display: flex; /* Flexbox für zentrierte Ausrichtung */
+    flex-direction: column; /* Vertikale Ausrichtung */
+    justify-content: center; /* Zentriert den Inhalt vertikal */
+    align-items: center; /* Zentriert den Inhalt horizontal */
+}
+
+/* Hintergrundfarbe für alle Texte */
+h1, h2, p, input, button {
+    background-color: rgba(255, 255, 255, 0.8); /* Hintergrundfarbe für Text */
+    padding: 10px; /* Padding für bessere Lesbarkeit */
+    border-radius: 4px; /* Runde Ecken für Textbereiche */
+    color: #000; /* Setze Textfarbe auf schwarz für bessere Lesbarkeit */
+}
+
+input {
+    display: block;
+    width: 90%; /* Eingabefelder bleiben schmaler */
+    margin: 10px auto;
+    padding: 10px; /* Mehr Padding für bessere Benutzererfahrung */
+    border: 1px solid #ccc; /* Rahmen für Eingabefelder */
+    border-radius: 4px; /* Runde Ecken für Eingabefelder */
+}
+
+#errorMessage {
+    color: red;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px; /* Mehr Padding für bessere Benutzererfahrung */
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Runde Ecken für den Button */
+    transition: background-color 0.3s; /* Sanfte Übergänge für Hover-Effekte */
+}
+
+button:hover {
+    background: #218838; /* Dunklere Farbe bei Hover */
+}
+
+/* Tab Navigation */
+nav {
+    display: flex; /* Flexbox für zentrierte Tabs */
+    justify-content: center; /* Zentriere die Tabs */
+    margin: 10px;
+}
+
+.tab {
+    display: inline-block;
+    margin: 0 10px; /* Horizontalen Abstand zwischen den Tabs */
+    padding: 10px 15px; /* Mehr Padding für Tabs */
+    background-color: #e7e7e7;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Sanfte Übergänge für Hover-Effekte */
+}
+
+.tab:hover {
+    background-color: #d4d4d4; /* Dunklere Farbe bei Hover */
+}
+
+/* Main content styles */
+main {
+    margin-top: 20px; /* Abstand zwischen Tabs und Inhalt */
+    text-align: left; /* Linksbündige Texte für bessere Lesbarkeit */
+}
+
+section {
+    margin: 20px 0; /* Abstand zwischen den Sektionen */
+}
